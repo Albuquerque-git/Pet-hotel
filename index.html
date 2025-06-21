@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <meta name="description" content="Hotel pet com creche, banho e tosa e cuidados veterinários em Arapiraca - AL. Bom pra Cachorro, seu pet em boas mãos.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Bom pra Cachorro</title>
+
+</head>
+
+<body> 
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>   
+  <nav class="menu-mobile" id="menuMobile">
+        <ul>
+      <li><a href="#header" onclick="fecharMenu()" aria-label="Ir para a seção Home">Home</a></li>
+      <li><a href="#sectionquemsomos" onclick="fecharMenu()" aria-label="Ir para a seção Seção Quem Somos">Quem Somos</a></li>
+      <li><a href="#diferencias" onclick="fecharMenu()" aria-label="Ir para a seção Diferenciais">Diferenciais</a></li>
+      <li><a href="#servicos" onclick="fecharMenu()" aria-label="Ir para a seção Serviços">Serviços</a></li>
+      <li><a href="#titulo-maps" onclick="fecharMenu()" aria-label="Endereço">Endereço</a></li>
+      <li><a href="#contato" onclick="fecharMenu()" aria-label="Ir para a seção Contato">Contato</a></li>
+        </ul>
+      </nav> 
+
+    
+  <nav class="nav-bar">     
+    <div class="container">
+      <a class="logo" href="#">
+        <img src="./img/logo.png" alt="logo">
+      </a>         
+    
+  <div class="menu" id="menu">
+  <ul>
+      <li><a href="#header" aria-label="Ir para a seção Home">Home</a></li>
+      <li><a href="#sectionquemsomos" aria-label="Ir para a seção Seção Quem Somos">Quem Somos</a></li>
+      <li><a href="#diferencias" aria-label="Ir para a seção Diferenciais">Diferenciais</a></li>
+      <li><a href="#servicos" aria-label="Ir para a seção Serviços">Serviços</a></li>
+      <li><a href="#titulo-maps" aria-label="Endereço">Endereço</a></li>
+      <li><a href="#contato" aria-label="Ir para a seção Contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <header id="header" class="header">
+    <div class="header-content">
+      <p>Creche e hotel canino</p>
+      <h1>A CASA DO SEU PET<br>LONGE DE CASA!</h1>
+      <div class="buttons">
+        <a href="https://wa.me/5582988908499" class="btn whatsapp"><i class="fab fa-whatsapp"></i> <span>Fale conosco pelo WhatsApp</span></a>        
+      </div>
+    </div>
+  </header>
+  <section  class="sectionquemsomos">
+    <div>
+      <img src="./img/section-pet-hotel.png" alt="">
+    </div>
+    <div id="sectionquemsomos" class="quemsomos">
+      <h2  class="titulo">QUEM SOMOS</h2>
+      <hr>
+      <p> Na Bom Pra Cachorro, somos apaixonados por pets! Fundado com amor e dedicação, nosso hotel pet nasceu da
+        vontade de oferecer um ambiente seguro, confortável e cheio de carinho para cães e gatos enquanto seus tutores
+        estão fora.
+
+        Sabemos que deixar seu melhor amigo aos cuidados de alguém exige confiança. Por isso, oferecemos uma estrutura
+        completa, com acomodações aconchegantes, áreas de lazer, supervisão 24h, alimentação balanceada e muito carinho
+        em cada detalhe.
+
+        Contamos com uma equipe treinada, formada por profissionais experientes e amantes dos animais, que cuidam de
+        cada hóspede como se fosse parte da família.
+
+        Seja para uma estadia de um fim de semana, um feriado ou uma viagem mais longa, garantimos tranquilidade para
+        você e muita diversão para seu pet. Aqui, ele se sente em casa! <br>
+        <br>
+        <br>
+
+        Bom pra Cachorro — Cuidando do seu pet com amor, segurança e alegria.
+
+      </p>
+    </div>
+  </section>
+
+  <section class="depoimentos-section scroll-reveal" id="depoimentos">
+  <div class="container">
+    <h3>Diversão no Pet Hotel</h3>
+    <hr>
+    <h2> Enquanto você cuida da sua rotina, nós cuidamos da felicidade deles! </h2>
+
+    <div class="swiper depoimentos-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides com prints -->
+        <div class="swiper-slide"><img src="./img/diversao.jpg" alt="Depoimento 1" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao1.jpg" alt="Depoimento 2" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao2.jpg" alt="Depoimento 3" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao3.jpg" alt="Depoimento 4" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao4.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao5.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao6.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao7.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao8.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/goldens.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao9.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao10.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao11.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao12.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao13.jpg" alt="Depoimento 5" class="depo-img"></div>
+        <div class="swiper-slide"><img src="./img/diversao14.jpg" alt="Depoimento 5" class="depo-img"></div>
+
+
+      </div>
+
+      <!-- Paginação -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Botões de navegação -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+</section>
+  
+  
+  <section  id="diferencias" class="diferenciais">
+    <div  class="diferenciais-text">
+      <h2 class="titulo">Diferenciais</h2>
+      <hr>
+      <p>🐾 Separação por porte e energia </p> <br><br>
+
+        <p>👩‍⚕️ Equipe Especializada e Amorosa </p> <br><br>
+
+      <p>🛁 Banho e Tosa Profissional </p><br><br>
+
+      <p> 📹 Monitoramento 24hrs </p> <br><br>
+
+      <p>🍽️ Alimentação Personalizada </p> <br><br>
+
+      <p>🎾 Recreação e Passeios Diários</p> <br><br>
+
+      <p>🐶 Cuidados Especiais para Pets Idosos ou com Necessidades</p> <br><br>
+
+      <p>🧼 Higienização Diária dos Ambientes</p> <br><br>
+
+      <p>🚐 Serviço de Pet Táxi (Serviço Adicional) </p> <br><br>
+
+    </div>
+
+    <div class="imagem-cachorros">
+      <img src="./img/fofo.jpg" alt="golden">
+    </div>
+  </section>
+
+
+  <section id="servicos" class="servicos">
+    <h2>Nossos Serviços</h2>
+    <hr>
+    <p>❤️Cuidamos do seu pet com amor, segurança e muito carinho.</p>
+    <div class="servicos-container">
+      <div class="servico">
+        <div class="imagem-wrapper">
+          <img src="./img/creche.jpg" alt="Creche para Cães">
+          <h3>Creche</h3>
+        </div>
+        <div class="conteudo">
+          <p>Cuidado diário com diversão e carinho para seu pet.</p>
+          <a href="https://wa.me/5582988908499" target="_blank"><i class="fab fa-whatsapp"></i><span>Fale conosco pelo WhatsApp</span></a>
+        </div>
+      </div>
+
+      <div class="servico">
+        <div class="imagem-wrapper">
+          <img src="./img/banho-tosa.jpg" alt="Banho e Tosa">
+          <h3>Banho e Tosa</h3>
+        </div>
+        <div class="conteudo">
+          <p>Seu pet sempre limpo e bem cuidado por profissionais.</p>
+          <a href="https://wa.me/5582988908499" target="_blank"><i class="fab fa-whatsapp"></i><span>Fale conosco pelo WhatsApp</span></a>
+        </div>
+      </div>
+
+      <div class="servico">
+        <div class="imagem-wrapper">
+          <img src="./img/socizlizacao.jpg" alt="Adestramento">
+          <h3>Socialização</h3>
+        </div>
+        <div class="conteudo">
+          <p>Atividades que estimulam o comportamento saudável.</p>
+          <a href="https://wa.me/5582988908499" target="_blank"><i class="fab fa-whatsapp"></i><span>Fale conosco pelo WhatsApp</span></a>
+        </div>
+      </div>
+
+      <div class="servico">
+        <div class="imagem-wrapper">
+          <img src="./img/pet-taxi.png" alt="Veterinário">
+          <h3>Pet Táxi</h3>
+        </div>
+        <div class="conteudo">
+          <p>Transporte seguro, confortável e com muito carinho.</p>
+          <a href="https://wa.me/5582988908499" target="_blank"><i class="fab fa-whatsapp"></i><span>Fale conosco pelo WhatsApp</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="titulo-maps" class="section-maps">
+    <div class="titulo-maps"> 
+    <h2> Conheça Nossa Unidade </h2>
+    <hr>
+  </div>
+   <div class="maps-content">
+  <div class="container-maps" >
+    <img src="./img/dog-localizacao.png" alt="imagem do mapa" class="img-mapa" > 
+  </div>  
+    <div class="container-button">
+      <address> Rua Lino Roberto n° 204 <br>
+         Bairro: Santa Edwiges <br> 
+         Arapiraca-AL</address> 
+      <a href="https://maps.app.goo.gl/UQrJDH5jnRDPpzBg6"> 
+        <span>Localização Bom pra Cachorro</span> 
+      </a>
+      </div>
+      </div>
+    </section>
+  
+   <div id="contato" class="contato">
+     <p><i class="fas fa-clock"></i>Funcionamento <br>Creche: seg á sex de 08:00 às 17:00
+  </p>
+  <p><i class="fas fa-paw"></i>Hotel: <br> Todos os dias <br> Checkin e Ckeckout às 08:00</p>
+    <p>
+      <i class="fab fa-whatsapp"></i>
+      <a href="https://wa.me/5582988908499" target="_blank">(82) 98890-8499</a>
+    </p>
+    <p>
+      <i class="fab fa-instagram"></i>
+      <a href="https://www.instagram.com/bompracachorro___?utm_source=ig_web_button_share_sheet&igsh=MTluZnhjbDJtdDB2OQ==" target="_blank">@bompracachorro___</a>
+  </div>
+  
+
+
+    <footer class="site-footer">
+  <div class="footer-content">
+    <p class="copyright">© Bom pra Cachorro - Todos os direitos reservados</p>
+    <p class="dev-credit">
+      Site desenvolvido por 
+      <a href="https://www.instagram.com/compilaadigital/" target="_blank">@compilaadigital</a>
+    </p>
+  </div>
+</footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

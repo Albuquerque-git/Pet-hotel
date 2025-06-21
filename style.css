@@ -1,0 +1,809 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: white;
+}
+
+section {
+
+  min-height: 100vh;
+  scroll-margin-top: 100px;
+  box-sizing: border-box;
+  overflow: hidden; /* <- Adicionado */
+}
+
+
+
+.menu-mobile {
+  display: none;
+}
+.menu-toggle{
+  display: none;
+}
+
+/* Esconde o menu por padrão em telas pequenas */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: transparent !important;
+  transition: background-color 0.9s ease;  
+  color: #ffffff;
+  padding: 10px 0;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.nav-bar.scrolled {
+  background-color: #000000 !important;
+  transition: 0.9s ease;
+}
+
+.nav-bar .container {
+  max-width: 1200px;  
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-bar .logo img {
+ width: 7rem;
+ height: auto;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-bar a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+/* ===========================
+   HEADER (HERO SECTION)
+   =========================== */
+
+   .pata {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  opacity: 0.8;
+  animation-timing-function: ease-in-out;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.6));
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-15px) translateX(10px) rotate(15deg);
+    opacity: 0.4;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 100vh;  
+  background-image: url('../img/logo1.png');  
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 60px;  
+}
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;  
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;  
+  max-width: 800px;
+  margin: 0 20px;  
+  padding: 20px;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.header-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* ===========================
+   BOTOES DENTRO DO HEADER
+   =========================== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+   
+  
+}
+
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;  
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #5CE1E6);
+  transition: width 1.1s ease;
+  z-index: 0;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+.btn i,
+.btn span
+ {
+  position: relative;
+  z-index: 1;   
+}
+.btn:hover {
+  color: #000000;
+}
+
+.sectionquemsomos {
+  display: flex;
+  justify-content: space-between;
+  background: #5CE1E6;
+  
+  
+
+}
+
+.sectionquemsomos img {
+width: 730px;
+  
+  
+
+}
+
+.quemsomos {
+  padding: 3rem;
+  background: #fff;
+  border: 1rem solid #e6e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.titulo {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: start;
+  color: #000000;
+  font-size: 35px;
+
+}
+
+.quemsomos p {
+  display: flex;
+  color: #000000;
+ 
+  text-align: left;
+  font-size: 20px;
+
+}
+
+.quemsomos hr {
+  background: #5CE1E6;
+  height: 5px;
+  width: 15rem;
+  margin-bottom: 2rem;
+
+}
+.depoimentos-section {
+  padding: 60px 20px;
+  text-align: center;
+  
+}
+
+.depoimentos-section h3 {
+  padding-top: 2rem;
+  color: #000;
+  font-size: 35px;
+  justify-content: center;
+  display: flex;
+}
+
+.depoimentos-section hr {
+  background: #5CE1E6;
+  height: 5px;
+  width: 23rem;
+  margin: 0 auto 2rem auto;
+}
+
+.depoimentos-section h2 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.depo-img {
+  width: 100%;
+  height: 300px; /* Altura fixa para padronizar */
+  max-width: 100%;
+  object-fit: cover; /* Garante que a imagem preencha sem deformar */
+  border-radius: 40px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.depo-img:hover {
+  transform: scale(1.03);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+}
+
+.swiper-pagination-bullet {
+  background: #000;
+}
+
+.diferenciais {
+  display: flex;  
+  background: #5CE1E6;
+  
+}
+
+
+.diferenciais-text {
+  background: #5CE1E6;
+  padding: 1rem;
+  background: #fff;
+  border: 1rem solid #e6e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  
+
+}
+
+.diferenciais hr {
+ width: 15rem;
+  margin-left: 0 auto;
+  border: 2px solid #5CE1E6;
+  margin-bottom: 2rem;
+ 
+}
+
+.imagem-cachorros {
+ 
+  width: 50%;
+}
+
+.imagem-cachorros img {
+  width: 100%;
+  height: 100%;
+}
+
+.diferenciais-text p { 
+   display: flex;
+  color: #000000;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+ .servicos {
+    width: 100%; 
+    
+    
+}
+.servicos h2{  
+  color: #000;
+  font-size: 35px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 6rem;
+}
+.servicos hr{
+  width: 17rem;  
+  border: 2px solid #5CE1E6;
+  margin:0 auto;
+ 
+}
+.servicos p{
+  color: #000;  ;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between
+ 
+} 
+
+.servico {
+  background-color: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(25% - 1rem);
+  max-width: calc(25% - 1rem);
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+
+.imagem-wrapper {
+  position: relative;
+   overflow: hidden;
+}
+
+.imagem-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imagem-wrapper h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 35px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+.imagem-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), transparent);
+  z-index: 1;
+}
+.servico .conteudo { 
+  padding: 20px;
+}
+
+.servico .conteudo p {
+  font-size: 17px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.conteudo a {
+   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+  .conteudo a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #5CE1E6);
+  transition: width 1.1s ease;
+  z-index: 0;
+}
+
+/* Ao passar o mouse, o gradiente preenche o fundo */
+.conteudo a:hover::before {
+  width: 100%;
+}
+.conteudo a:hover {
+  color: #000000;
+}
+
+.conteudo span, .conteudo i{
+  position: relative;
+  z-index: 1;
+}
+.container-maps img{
+  width: 350px;
+  height: auto;
+  border-radius: 2rem;
+}
+.section-maps{
+   padding: 60px 20px;
+  align-items: center;
+  gap: 3rem;
+  
+}
+.container-button{
+  text-align: center;
+}
+.container-button a{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  
+}
+
+.container-button address{
+ margin-bottom: 2rem;
+}
+
+/* Fundo gradiente que vai crescer */
+.container-button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #5CE1E6);
+  transition: width 1.1s ease;
+  z-index: 0;
+}
+
+/* Ao passar o mouse, o gradiente preenche o fundo */
+.container-button a:hover::before {
+  width: 100%;
+}
+
+/* Ícone e texto ficam acima do gradiente */
+.container-button a span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Muda a cor do texto no hover para ficar visível sobre o fundo */
+.container-button a:hover {
+  color: #000000;
+}
+
+.titulo-maps {
+  padding: 0;}
+
+.titulo-maps h2 {
+  display: flex;
+  color: #000000;
+  font-size: 35px;
+  justify-content: center;
+  margin-top: 2rem;
+  }
+
+.titulo-maps hr {
+  width: 25rem;
+  margin: 0 auto;
+  border: 2px solid #5CE1E6;
+  margin-bottom: 2rem;
+}
+
+.maps-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* Faz quebrar no celular */
+  text-align: center;
+}
+
+
+.site-footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 30px 20px;
+  text-align: center;
+  font-weight: bold;
+ 
+}
+
+.site-footer .footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  margin: 10px 0;
+  font-size: 15px;  
+}
+
+
+.contato {
+  background-image: url('./img/back-depoimentos.jpg');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 40px;
+  gap: 20px;
+  position: relative;
+  color: white;
+   font-weight: 600;
+  
+}
+
+.contato::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.contato p {
+  z-index: 2;
+  font-size: 30px;
+}
+
+.contato i {
+  margin-right: 10px;
+  color: #5CE1E6;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+.contato a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contato a:hover {
+  color: #5CE1E6;
+}
+.footer-content a{
+  text-decoration: none;
+  list-style: none;
+  color: #012ffd;
+}
+
+
+
+/* RESPONSIVIDADE GERAL */
+
+@media screen and (max-width:728px){
+  .menu{
+    display: none;
+  }
+  .nav-bar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 35px;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    
+  }
+
+  .menu-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 200px;
+    background-color: #fff;
+    border-left: 1px solid var(--vidro);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    padding-top: 70px;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .buttons{
+    display:grid;    
+    
+  }
+ .quemsomos p {
+    font-size: 16px; /* tamanho menor para celular ou tablet */
+  }
+  .sectionquemsomos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionquemsomos img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .diferenciais {
+    flex-direction: column;    
+  }
+
+  .imagem-cachorros {
+    width: 100%;    
+    height: 110%;
+  }
+
+  .imagem-cachorros img {
+   width: 100%;
+   height: auto;
+
+  }
+
+  .diferenciais-text {
+    width: 100%;
+  }
+    .servicos-container {
+    flex-direction: column;
+    align-items: center; 
+
+  }
+  .servico {
+    flex: 1 1 100%;
+    max-width: 100%;
+   
+  }
+ 
+
+  .section-maps {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-maps img {
+    width: 90%;
+    max-width: 100%;
+  }
+   .contato {
+    background-position: center center; /* garante centralização */
+    height: 300px; /* reduz a altura para ficar melhor */
+    padding-left: 20px; 
+  }
+
+  .contato p {
+    font-size: 1.2rem;
+  }
+}
+      
+.menu-mobile.show {
+        right: 0;
+      }
+      
+.menu-mobile ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+.menu-mobile li a {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--claro);
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease;
+      }
+      
+.menu-mobile li a:hover {
+        background: #00ffcc;
+      }
+
+
+  
+      
+          
+       
+      
+     
+
+
